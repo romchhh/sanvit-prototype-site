@@ -6,11 +6,11 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.top}>
         <nav className={styles.links} aria-label="Навігація в підвалі">
-          <a href="#pro-nas">Про групу</a>
-          <a href="#produkciya">Продукція</a>
-          <a href="#rishennya">Рішення</a>
-          <a href="#vyrobnytstvo">Виробництво</a>
-          <a href="#kontakty">Контакти</a>
+          <a href="/#pro-nas">Про групу</a>
+          <a href="/#produkciya">Продукція</a>
+          <a href="/#rishennya">Рішення</a>
+          <a href="/#vyrobnytstvo">Виробництво</a>
+          <a href="/#kontakty">Контакти</a>
         </nav>
 
         <div className={styles.cols}>

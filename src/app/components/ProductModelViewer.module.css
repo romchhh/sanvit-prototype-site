@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
+  min-width: 0;
 }
 
 .frame {
@@ -30,17 +32,41 @@
   margin: 0;
   text-align: center;
   font-size: 12px;
+  line-height: 1.4;
   color: var(--slate);
+}
+
+.hintDesktop {
+  display: inline;
+}
+
+.hintMobile {
+  display: none;
 }
 
 @media (max-width: 900px) {
   .frame {
-    height: 380px;
+    height: min(58vw, 380px);
+    min-height: 280px;
+    border-radius: 14px;
+  }
+
+  .hint {
+    font-size: 11px;
+  }
+
+  .hintDesktop {
+    display: none;
+  }
+
+  .hintMobile {
+    display: inline;
   }
 }
 
 @media (max-width: 640px) {
   .frame {
-    height: 320px;
+    height: min(72vw, 320px);
+    min-height: 240px;
   }
 }

@@ -75,7 +75,7 @@ function Scene({ modelUrl }: { modelUrl: string }) {
         dampingFactor={0.08}
         zoomSpeed={0.9}
         rotateSpeed={0.7}
-        minDistance={2.2}
+        minDistance={1.8}
         maxDistance={9}
         minPolarAngle={0.15}
         maxPolarAngle={Math.PI - 0.15}
@@ -114,7 +114,10 @@ export default function ProductModelViewer({ modelUrl }: { modelUrl: string }) {
         </Canvas>
       </div>
 
-      <p className={styles.hint}>Коліщатко — наблизити / віддалити · Тягніть — обертати</p>
+      <p className={styles.hint}>
+        <span className={styles.hintDesktop}>Коліщатко — наблизити / віддалити · Тягніть — обертати</span>
+        <span className={styles.hintMobile}>Щипок — масштабувати · Тягніть — обертати</span>
+      </p>
     </div>
   )
 }

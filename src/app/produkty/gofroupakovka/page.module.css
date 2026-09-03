@@ -1,6 +1,7 @@
 .page {
   padding: 112px var(--page-pad) 72px;
   background: #fff;
+  overflow-x: clip;
 }
 
 .back {
@@ -33,12 +34,14 @@
   border-radius: 20px;
   background: var(--paper);
   border: 1px solid rgba(26, 22, 18, 0.06);
+  min-width: 0;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 0;
 }
 
 .heading {
@@ -137,6 +140,7 @@
 .ctaSecondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 14px 20px;
   border-radius: 999px;
@@ -170,25 +174,88 @@
 
 @media (max-width: 900px) {
   .page {
-    padding-top: 96px;
+    padding: 96px var(--page-pad) 56px;
+  }
+
+  .back {
+    margin-bottom: 20px;
   }
 
   .layout {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .viewerCard {
-    min-height: 0;
+    order: 1;
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  .info {
+    order: 2;
+    gap: 16px;
+  }
+
+  .heading {
+    font-size: clamp(32px, 9vw, 44px);
+  }
+
+  .lead {
+    font-size: 14px;
+    max-width: none;
+  }
+
+  .specs {
+    padding: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+    min-height: 48px;
   }
 }
 
 @media (max-width: 640px) {
   .page {
-    padding: 88px var(--page-pad) 56px;
+    padding: 84px var(--page-pad) 48px;
+  }
+
+  .back {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .layout {
+    gap: 22px;
+  }
+
+  .viewerCard {
+    padding: 8px;
+    border-radius: 14px;
+  }
+
+  .info {
+    gap: 14px;
   }
 
   .spec {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .specs {
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .features li {
+    font-size: 13px;
   }
 }

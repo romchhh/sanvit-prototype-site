@@ -2,11 +2,11 @@
 import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
-const LINKS = [
-  { href: '#produkciya', label: 'Продукція' },
-  { href: '#rishennya', label: 'Рішення' },
-  { href: '#vyrobnytstvo', label: 'Виробництво' },
-  { href: '#kontakty', label: 'Контакти' },
+const HOME_LINKS = [
+  { href: '/#produkciya', label: 'Продукція' },
+  { href: '/#rishennya', label: 'Рішення' },
+  { href: '/#vyrobnytstvo', label: 'Виробництво' },
+  { href: '/#kontakty', label: 'Контакти' },
 ] as const
 
 export default function Navbar({ transparent = false }: { transparent?: boolean }) {
@@ -30,7 +30,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
         <a href="/" className={styles.brand}>санвіт</a>
 
         <div className={styles.center}>
-          {LINKS.map((link) => (
+          {HOME_LINKS.map((link) => (
             <a key={link.href} href={link.href}>{link.label}</a>
           ))}
         </div>
@@ -40,7 +40,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
             <span className={styles.active}>UA</span>
             <span>EN</span>
           </div>
-          <a href="#kontakty" className={styles.ctaPrimary}>
+          <a href="/#kontakty" className={styles.ctaPrimary}>
             <span>Отримати прорахунок</span>
             <span className={styles.ctaArrow} aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -72,11 +72,11 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
           </button>
         </div>
         <nav className={styles.drawerNav} aria-label="Мобільна навігація">
-          {LINKS.map((link) => (
+          {HOME_LINKS.map((link) => (
             <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>{link.label}</a>
           ))}
         </nav>
-        <a href="#kontakty" className={styles.drawerCta} onClick={() => setMenuOpen(false)}>
+        <a href="/#kontakty" className={styles.drawerCta} onClick={() => setMenuOpen(false)}>
           <span>Отримати прорахунок</span>
           <span className={styles.drawerCtaArrow} aria-hidden="true">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
