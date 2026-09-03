@@ -27,44 +27,75 @@ export const PRODUCTS = [
     title: 'Гофроупаковка',
     text: 'Ящики, лотки та нестандартні конструкції під ваш продукт.',
     image: '/images/sanvit-holding/products/gofroupakovka.png',
+    href: '/produkty/gofroupakovka',
   },
   {
     id: 'corrugated-tare',
     title: 'Гофротара',
     text: 'Серійна тара для виробництва, складу та логістики.',
     image: '/images/sanvit-holding/products/gofrotara.png',
+    href: '/#kontakty',
   },
   {
     id: 'flex',
     title: 'Гнучка упаковка',
     text: 'Плівки та пакети для харчової й промислової продукції.',
     image: '/images/sanvit-holding/products/gnuchka-upakovka.png',
+    href: '/#kontakty',
   },
   {
     id: 'tape',
     title: 'Скотч',
     text: 'Пакувальні стрічки для лінії, складу та відвантаження.',
     image: '/images/sanvit-holding/products/skotch.png',
+    href: '/#kontakty',
   },
   {
     id: 'stretch',
     title: 'Стрейч-плівка',
     text: 'Палетування вантажів — стабільно і з контролем витрати.',
     image: '/images/sanvit-holding/products/streych-plivka.png',
+    href: '/#kontakty',
   },
   {
     id: 'bubble',
     title: 'Повітряно-бульбашкова плівка',
     text: 'Захист крихких і габаритних відправлень у дорозі.',
     image: '/images/sanvit-holding/products/bulbashkova-plivka.png',
+    href: '/#kontakty',
   },
   {
     id: 'kraft',
     title: 'Крафт-папір',
     text: 'Обгортка, прокладки та екологічні пакувальні рішення.',
     image: '/images/sanvit-holding/products/kraft-papir.png',
+    href: '/#kontakty',
   },
 ] as const
+
+export type Product = (typeof PRODUCTS)[number]
+
+export const PRODUCT_DETAILS = {
+  'corrugated-pack': {
+    slug: 'gofroupakovka',
+    model: '/models/gofroupakovka.stl',
+    subtitle: 'Ящики, лотки та нестандартні конструкції',
+    description:
+      'Гофроупаковка для транспортування, зберігання та презентації продукції. Підбираємо профіль, товщину картону та конструкцію під вагу, габарити й логістичний цикл.',
+    specs: [
+      { label: 'Матеріал', value: '3-шаровий / 5-шаровий гофрокартон' },
+      { label: 'Конструкції', value: 'FEFCO, лотки, перегородки, вкладиші' },
+      { label: 'Друк', value: 'Flexo, офсет, цифровий' },
+      { label: 'Мінімальний тираж', value: 'Від 500 од.' },
+    ],
+    features: [
+      'Розрахунок міцності під вагу та штабелювання',
+      'Прототипування та зразки перед серією',
+      'Друк логотипу та маркування на тару',
+      'Поставки на склад або лінію клієнта',
+    ],
+  },
+} as const
 
 export const SOLUTIONS = [
   {

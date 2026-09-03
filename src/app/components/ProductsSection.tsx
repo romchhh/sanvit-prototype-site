@@ -18,7 +18,7 @@ export default function ProductsSection() {
         {PRODUCTS.map((product, index) => (
           <a
             key={product.id}
-            href="#kontakty"
+            href={product.href}
             className={`${styles.card} ${index === 0 ? styles.featured : ''}`}
           >
             <span className={styles.body}>
