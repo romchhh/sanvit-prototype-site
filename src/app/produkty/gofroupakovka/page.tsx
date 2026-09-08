@@ -28,8 +28,23 @@ export default function GofroupakovkaProductPage() {
         </a>
 
         <div className={styles.layout}>
-          <div className={styles.viewerCard}>
-            <ProductModelViewer modelUrl={details.model} />
+          <div className={styles.mediaColumn}>
+            <div className={styles.viewerCard}>
+              <ProductModelViewer modelUrl={details.model} />
+            </div>
+
+            <div className={styles.videoCard}>
+              <video
+                className={styles.video}
+                src={details.video}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label={`Відео: ${product.title}`}
+              >
+                Ваш браузер не підтримує відтворення відео.
+              </video>
+            </div>
           </div>
 
           <div className={styles.info}>

@@ -79,6 +79,7 @@ export const PRODUCT_DETAILS = {
   'corrugated-pack': {
     slug: 'gofroupakovka',
     model: '/models/gofroupakovka.stl',
+    video: '/videos/gofroupakovka.mp4',
     subtitle: 'Ящики, лотки та нестандартні конструкції',
     description:
       'Гофроупаковка для транспортування, зберігання та презентації продукції. Підбираємо профіль, товщину картону та конструкцію під вагу, габарити й логістичний цикл.',
