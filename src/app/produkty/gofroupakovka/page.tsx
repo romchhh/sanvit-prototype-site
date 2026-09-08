@@ -26,13 +26,13 @@ export default function GofroupakovkaProductPage() {
             <video
               className={styles.video}
               src={details.video}
-              controls
+              autoPlay
+              muted
+              loop
               playsInline
-              preload="metadata"
-              aria-label={`Відео: ${product.title}`}
-            >
-              Ваш браузер не підтримує відтворення відео.
-            </video>
+              preload="auto"
+              aria-label={product.title}
+            />
           </div>
 
           <div className={styles.info}>

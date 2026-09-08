@@ -31,9 +31,6 @@
 
 .videoCard {
   overflow: hidden;
-  border-radius: 20px;
-  background: var(--deep);
-  border: 1px solid rgba(26, 22, 18, 0.08);
   min-width: 0;
 }
 
@@ -41,9 +38,8 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
   object-fit: contain;
-  background: #120f0c;
+  pointer-events: none;
 }
 
 .info {
@@ -197,7 +193,6 @@
 
   .videoCard {
     order: 1;
-    border-radius: 16px;
   }
 
   .info {
@@ -242,10 +237,6 @@
 
   .layout {
     gap: 22px;
-  }
-
-  .videoCard {
-    border-radius: 14px;
   }
 
   .info {
