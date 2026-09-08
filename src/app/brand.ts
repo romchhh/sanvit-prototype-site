@@ -78,7 +78,6 @@ export type Product = (typeof PRODUCTS)[number]
 export const PRODUCT_DETAILS = {
   'corrugated-pack': {
     slug: 'gofroupakovka',
-    model: '/models/gofroupakovka.stl',
     video: '/videos/gofroupakovka.mp4',
     subtitle: 'Ящики, лотки та нестандартні конструкції',
     description:

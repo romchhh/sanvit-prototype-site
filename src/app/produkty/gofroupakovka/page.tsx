@@ -1,14 +1,8 @@
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import { BRAND, PRODUCT_DETAILS, PRODUCTS } from '../../brand'
 import styles from './page.module.css'
-
-const ProductModelViewer = dynamic(() => import('../../components/ProductModelViewer'), {
-  ssr: false,
-  loading: () => <div className={styles.viewerCard}>Завантаження 3D-моделі…</div>,
-})
 
 const product = PRODUCTS.find((item) => item.id === 'corrugated-pack')!
 const details = PRODUCT_DETAILS['corrugated-pack']
@@ -28,23 +22,17 @@ export default function GofroupakovkaProductPage() {
         </a>
 
         <div className={styles.layout}>
-          <div className={styles.mediaColumn}>
-            <div className={styles.viewerCard}>
-              <ProductModelViewer modelUrl={details.model} />
-            </div>
-
-            <div className={styles.videoCard}>
-              <video
-                className={styles.video}
-                src={details.video}
-                controls
-                playsInline
-                preload="metadata"
-                aria-label={`Відео: ${product.title}`}
-              >
-                Ваш браузер не підтримує відтворення відео.
-              </video>
-            </div>
+          <div className={styles.videoCard}>
+            <video
+              className={styles.video}
+              src={details.video}
+              controls
+              playsInline
+              preload="metadata"
+              aria-label={`Відео: ${product.title}`}
+            >
+              Ваш браузер не підтримує відтворення відео.
+            </video>
           </div>
 
           <div className={styles.info}>

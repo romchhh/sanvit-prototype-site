@@ -29,33 +29,19 @@
   align-items: start;
 }
 
-.mediaColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  min-width: 0;
-}
-
-.viewerCard {
-  padding: 12px;
-  border-radius: 20px;
-  background: var(--paper);
-  border: 1px solid rgba(26, 22, 18, 0.06);
-  min-width: 0;
-}
-
 .videoCard {
   overflow: hidden;
   border-radius: 20px;
   background: var(--deep);
   border: 1px solid rgba(26, 22, 18, 0.08);
+  min-width: 0;
 }
 
 .video {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 420px;
+  aspect-ratio: 16 / 9;
   object-fit: contain;
   background: #120f0c;
 }
@@ -209,22 +195,9 @@
     gap: 28px;
   }
 
-  .mediaColumn {
-    order: 1;
-    gap: 12px;
-  }
-
-  .viewerCard {
-    padding: 10px;
-    border-radius: 16px;
-  }
-
   .videoCard {
+    order: 1;
     border-radius: 16px;
-  }
-
-  .video {
-    max-height: 320px;
   }
 
   .info {
@@ -271,17 +244,8 @@
     gap: 22px;
   }
 
-  .viewerCard {
-    padding: 8px;
-    border-radius: 14px;
-  }
-
   .videoCard {
     border-radius: 14px;
-  }
-
-  .video {
-    max-height: 260px;
   }
 
   .info {
